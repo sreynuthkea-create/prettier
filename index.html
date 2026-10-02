@@ -143,8 +143,8 @@
 			<form class="form-panel" id="student-form">
 				<div class="form-heading"><h2>ព័ត៌មាននិស្សិត</h2><span class="step-label">01 — YOUR DETAILS</span></div>
 				<div class="field-grid">
-					<div class="field full"><label for="kh-name">ឈ្មោះជាភាសាខ្មែរ</label><input id="kh-name" name="khName" value="ចាន់ថន សុភា" autocomplete="name" maxlength="40"></div>
-					<div class="field full"><label for="en-name">ឈ្មោះជាភាសាអង់គ្លេស</label><input id="en-name" name="enName" value="SOPHEA CHANTHON" maxlength="40"></div>
+					<div class="field full"><label for="kh-name">ឈ្មោះជាភាសាខ្មែរ</label><input id="kh-name" name="khName" value="គា ស្រីនុត" autocomplete="name" maxlength="40"></div>
+					<div class="field full"><label for="en-name">ឈ្មោះជាភាសាអង់គ្លេស</label><input id="en-name" name="enName" value="Kea Srey Nuth" maxlength="40"></div>
 					<div class="field"><label for="student-id">លេខសម្គាល់</label><input id="student-id" name="studentId" value="BBU-2026-0184" maxlength="20"></div>
 					<div class="field"><label for="birth-year">ឆ្នាំកំណើត</label><input id="birth-year" name="birthYear" type="number" min="1900" max="2026" value="2004"></div>
 					<div class="field full"><label for="base-tuition">ថ្លៃសិក្សាដើម (USD)</label><input id="base-tuition" name="tuition" type="number" min="0" step="50" value="1200"></div>
@@ -174,7 +174,7 @@
 					<div class="card-body">
 						<div class="student-profile">
 							<div class="avatar" id="student-avatar">SC</div>
-							<div class="student-names"><h2 id="student-kh-name">គា​​ ស្រីនុត</h2><p id="student-en-name">Kea Srey nuth</p><span class="id-label" id="student-id-display">ID: BBU-2026-0184</span></div>
+							<div class="student-names"><h2 id="student-kh-name">គា ស្រីនុត</h2><p id="student-en-name">Kea Srey Nuth</p><span class="id-label" id="student-id-display">ID: BBU-2026-0184</span></div>
 						</div>
 						<div class="details-grid">
 							<div><span class="detail-label">ឆ្នាំកំណើត</span><strong class="detail-value" id="val-birth-year">2007</strong></div>
@@ -217,7 +217,7 @@
 			const enName = fields.enName.value.trim() || "STUDENT NAME";
 
 			document.querySelector("#student-kh-name").textContent = khName;
-			document.querySelector("#student-en-name").textContent = enName.toUpperCase();
+			document.querySelector("#student-en-name").textContent = enName;
 			document.querySelector("#student-id-display").textContent = "ID: " + (fields.studentId.value.trim() || "BBU-0000-0000");
 			document.querySelector("#student-avatar").textContent = enName.split(/\s+/).filter(Boolean).slice(0, 2).map((part) => part[0]).join("").toUpperCase() || "ID";
 			document.querySelector("#val-birth-year").textContent = validBirthYear ? String(birthYear) : "—";
